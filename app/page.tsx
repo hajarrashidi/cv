@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default async function Page() {
   const cv = {
     fullName: "Hajar Rashidi",
@@ -118,12 +116,10 @@ export default async function Page() {
               </div>
               <div className="absolute left-4 top-1/2 w-8 h-8 bg-gray-200 rounded-full transform -translate-y-1/2">
                 {experience.logotype ? (
-                  <Image
+                  <img
                     src={experience.logotype}
                     alt={`${experience.position} at ${experience.company}`}
                     className="w-full h-full rounded-full object-contain p-1"
-                    width={32}
-                    height={32}
                   />
                 ) : null}
               </div>
