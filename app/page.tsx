@@ -49,7 +49,7 @@ const InfoItem = ({content}: InfoItemProps) => (
 );
 
 const ExperienceItem = ({experience}: ExperienceItemProps) => (
-  <div className="relative pb-5 pl-14 pr-4">
+  <div className="relative pb-2">
     <div className="bg-white rounded-lg border border-gray-200 p-3.5">
       <h2 className="text-sm font-semibold flex items-center pb-1">
         <span>{experience.position}</span>
@@ -72,20 +72,12 @@ const ExperienceItem = ({experience}: ExperienceItemProps) => (
         </div>
       )}
     </div>
-    {experience.logotype && (
-      <div className="absolute left-3 top-1/2 w-8 h-8 bg-gray-200 rounded-full transform -translate-y-1/2">
-        <img
-          src={experience.logotype}
-          alt={`${experience.position} at ${experience.company}`}
-          className="w-full h-full rounded-full object-contain p-1"
-        />
-      </div>
-    )}
+
   </div>
 );
 
 const EducationItem = ({education}: EducationItemProps) => (
-  <div className="relative pb-2 pl-14 pr-4">
+  <div className="relative pb-2">
     <div className="bg-white rounded-lg border border-gray-200 p-3.5">
       <h2 className="text-sm font-semibold flex items-center pb-1">
         <span>{education.degree}</span>
@@ -102,15 +94,14 @@ const EducationItem = ({education}: EducationItemProps) => (
 
 const Page = () => {
   return (
-    <main className="m-0 p-0 bg-gray-50 min-h-screen">
+    <main className="m-0 p-0 bg-gray-50 min-h-screen pl-3 pr-3">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold pt-10 pb-8 text-center pl-6">
+        <h1 className="text-4xl font-bold pt-10 pb-8 text-center">
           {cv.fullName}
         </h1>
         <div className="relative">
-          <div className="border-l-2 rounded border-gray-200 absolute left-7 top-0 h-full"></div>
-          <h1 className="text-sm  text-gray-500 ml-14">Kontakt</h1>
-          <div className="relative pb-4 pt-2 pl-14 pr-4">
+          <h1 className="text-sm pb-3 text-gray-500">Kontakt</h1>
+          <div className="relative pb-4">
             <ContactInfo>
               <InfoItem content="+46 072 448 76 18"/>
               <InfoItem content="hajarrashidi@gmail.com"/>
@@ -121,16 +112,14 @@ const Page = () => {
         </div>
 
         <div className="relative">
-          <div className="border-l-2 rounded border-gray-200 absolute left-7 top-0 h-full"></div>
-          <h2 className="text-sm p-3 text-gray-500 ml-12">Arbetslivserfarenhet</h2>
+          <h2 className="text-sm pb-3 text-gray-500 ">Arbetslivserfarenhet</h2>
           {cv.workExperience.map((experience, index) => (
             <ExperienceItem key={index} experience={experience}/>
           ))}
         </div>
 
-        <h2 className="text-sm p-3 text-gray-500 ml-12">Utbildning</h2>
+        <h2 className="text-sm pb-3 pt-4 text-gray-500 ">Utbildning</h2>
         <div className="relative">
-          <div className="border-l-2 rounded border-gray-200 absolute left-7 top-0 h-full"></div>
           {cv.education.map((education, index) => (
             <EducationItem key={index} education={education}/>
           ))}
