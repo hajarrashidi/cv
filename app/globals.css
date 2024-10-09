@@ -2,3 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FBFAF9;
+}
+
+.profile-picture-frame {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+}
+
+.profile-picture {
+  border-color: #ab937b;
+}
+
+.save-as-pdf-button {
+  background-color: #3b3b3b;
+}
+
+.save-as-pdf-button:hover {
+  background-color: #B2987F;
+}
+
+.skill {
+  text-align: center;
+  background-color: rgb(241, 241, 241);
+  padding: 3px 10px;
+  border-radius: 1.5rem;
+  margin-right: 10px;
+  margin-bottom: 7px;
+}
+
+.contactInfo {
+  background-color: #bdac9a;
+}
+
+.infoItem {
+  border: 1px dashed #ab937b;
+  background-color: rgba(59, 59, 59, 0.04);
+  color: #252525;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contactInfoBar {
+  padding: 10px;
+  background-color: #e8dfdc;
+}
