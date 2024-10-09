@@ -9,6 +9,7 @@ export const EducationItem = ({ education }: { education: Education }) => {
       subtitle={institution}
       dateRange={`${startDate} - ${endDate}`}
       description={description}
+      content={null}
     />
   );
 };

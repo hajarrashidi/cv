@@ -13,6 +13,7 @@ interface CardProps {
   description?: string;
   subtitle?: string;
   dateRange: string;
+  content: React.ReactNode;
 }
 
 interface Experience {
