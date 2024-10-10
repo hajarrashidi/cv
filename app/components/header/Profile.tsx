@@ -2,7 +2,7 @@ export const Profile = () => {
   return (
     <div>
       <img
-        src="/images/work_picture.jpeg"
+        src="/images/work_picture.avif"
         alt="Profile"
         width="150"
         height="150"
