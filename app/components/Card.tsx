@@ -1,6 +1,6 @@
 export const Card = ({title, description, subtitle, dateRange, content}: CardProps) => (
-  <div className="relative pb-2">
-    <div className="bg-white rounded-lg border border-gray-200 p-3.5 md:p-6">
+  <div className="relative pb-2 ">
+    <div className="bg-white rounded-lg  p-3.5 md:p-6">
       <h2 className="text-sm font-semibold flex items-center pb-1">
         <span>{title}</span>
         {subtitle && (

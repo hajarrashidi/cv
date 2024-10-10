@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #FBFAF9;
+  background-color: #F4F2EE;
 }
 
 .profile-picture-frame {
@@ -14,7 +14,8 @@ body {
 }
 
 .profile-picture {
-  border-color: #c1b09f;
+  border-color: #ab937b;
+  margin-bottom: 4px;
 
 }
 
@@ -37,22 +38,34 @@ body {
 }
 
 .contactInfo {
-  background-color: #d9c9ba;
+  background-color: #BDA997;
 }
 
 .infoItem {
-  border: 2px solid #efefef;
-  border-radius: 5px;
   background-color: #F7F6F5;
   color: #252525;
   text-align: center;
   font-size: 12px;
-  padding: 5px;
+  padding: 9px;
   margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .infoItem {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contactInfoBar {
   padding: 10px;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
   background-color: #ffffff;
 }
 
@@ -60,4 +73,45 @@ body {
   border: 1px solid rgba(164, 142, 119, 0.25);
   border-radius: 5px;
   background-color: rgba(247, 246, 245, 0.56);
+}
+
+.tips {
+  background-color: #bda9971a;
+  padding: 10px;
+  font-size: 0.800rem; /* 14px */
+  line-height: 1.20rem; /* 20px */
+}
+
+.section {
+  color: #665a47;
+}
+
+@media print {
+  div.chapter, div.appendix {
+    page-break-after: always;
+  }
+
+  @page {
+    size: 21cm 29.7cm;
+    margin: 0;
+    /* change the margins as you want them to be. */
+  }
+}
+
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+
+.grid-item {
+  padding: 0;
+  /* Ensure no other styles are affecting the width */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.item {
+  flex: 1;
+  min-width: 0;
 }

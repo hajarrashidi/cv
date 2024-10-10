@@ -244,7 +244,11 @@ export const cv = {
       startDate: "August 2016",
       endDate: "January 2017",
       logotype: "/images/gamestop.png",
-      skills: [],
+      skills: [
+        {title: "Sälj"},
+        {title: "Kundservice"},
+        {title: "Lagerhantering"},
+      ],
     },
   ],
   education: [

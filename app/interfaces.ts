@@ -1,6 +1,7 @@
 interface InfoItemProps {
   label: string;
   content: string;
+  type: string;
 }
 
 interface SectionProps {

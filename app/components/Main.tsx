@@ -3,7 +3,6 @@ import {cv} from "@/app/data";
 // Components
 import {ExperienceItem} from "@/app/components/ExperienceItem";
 import {EducationItem} from "@/app/components/EducationItem";
-import {SaveAsPdf} from "@/app/components/SaveAsPdf";
 import {Section} from "@/app/components/Section";
 import {ContactInfo} from "@/app/components/ContactInfo";
 import {Key} from "react";
@@ -11,11 +10,11 @@ import {AboutMe} from "@/app/components/AboutMe";
 import {CertificateItem} from "@/app/components/CertificateItem";
 
 export const Main = () => {
-  const {phone, email, dob, github, workExperience, education, certificates} = cv;
+  const {phone, email, workExperience, education, certificates} = cv;
 
   const infoItems: InfoItemProps[] = [
-    {label: "Phone", content: phone},
-    {label: "Email", content: email},
+    {label: "Phone", content: phone, type: "phone"},
+    {label: "Email", content: email, type: "email"},
   ];
 
   // Experience
@@ -41,14 +40,15 @@ export const Main = () => {
 
   return (
     <div>
-      <SaveAsPdf/>
+      {/*<SaveAsPdf/>*/}
 
-      <main id="page" className="m-0 p-0 min-h-screen pl-3 pr-3 pt-3 pb-8">
+      <main id="page" className="m-0 p-0 min-h-screen pl-3 pr-3 pt-0 pb-8">
+
         <div className="max-w-4xl mx-auto">
 
 
           <div className="flex flex-col md:flex-row md:space-x-3">
-            <div className="flex-1">
+            <div className="item">
               <Section title="Kontakt Uppgifter">
                 <ContactInfo infoItems={infoItems}/>
               </Section>
@@ -66,7 +66,7 @@ export const Main = () => {
 
             </div>
 
-            <div className="flex-1">
+            <div className="item">
               <Section title="Arbetslivserfarenhet">{experienceItems}</Section>
             </div>
 
