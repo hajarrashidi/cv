@@ -38,8 +38,8 @@ body {
 }
 
 .contactInfo {
-  border: 6px solid rgba(171, 147, 123, 0.07);
-  background: radial-gradient(circle, rgb(167 140 115 / 61%) 0%, rgba(189, 169, 151, 0.8626609442060086) 35%, rgba(255, 255, 255, 0.15) 100%)
+  border: 3px solid rgba(171, 147, 123, 0.07);
+  background: radial-gradient(circle, rgb(167 140 115 / 61%) 0%, rgba(189, 169, 151, 0.7626609442060086) 35%, rgba(255, 255, 255, 0.15) 100%);
 }
 
 .infoItem {
@@ -53,8 +53,7 @@ body {
 
 @media (max-width: 768px) {
   .infoItem {
-    font-size: 13px;
-    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.48);
   }
 }
 
