@@ -1,7 +1,7 @@
 import {Card} from "@/app/components/Card";
 
-export const ExperienceItem = ({ experience }: { experience: Experience }) => {
-  const { position, company, startDate, endDate, description, assignments, skills } =
+export const ExperienceItem = ({experience}: { experience: Experience }) => {
+  const {position, company, startDate, endDate, description, assignments, skills} =
     experience;
 
   return (
@@ -27,7 +27,7 @@ export const ExperienceItem = ({ experience }: { experience: Experience }) => {
                   key={`${assignment.title}-${idx}`}
                   className="text-sm text-gray-700 pt-1 pb-1"
                 >
-                      {assignment.title}{idx < assignments.length - 1 && ', '}
+                  {assignment.title}{idx < assignments.length - 1 && ', '}
                 </span>
               ))}
             </div>
@@ -36,15 +36,17 @@ export const ExperienceItem = ({ experience }: { experience: Experience }) => {
           {skills?.length && (
             <div className="mt-3">
               <h3 className="text-xs font-bold text-gray-600 pb-2">Skills</h3>
+
               <div className="flex flex-wrap">
                 {skills.map((skill, idx) => (
                   <div
                     key={`${skill.title}-${idx}`}
-                    className="skill"
+                    className="pb-2 box-border pr-1"
                   >
-                    <p>
-                    {skill.title}
-                    </p>
+                    <div
+                      className="skill">
+                      {skill.title}
+                    </div>
                   </div>
                 ))}
               </div>

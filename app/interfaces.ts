@@ -34,3 +34,10 @@ interface Education {
   endDate: string;
   location: string;
 }
+
+interface Certificate {
+  name: string;
+  organization: string;
+  date: string;
+  link: string;
+}

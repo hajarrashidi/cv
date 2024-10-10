@@ -14,7 +14,8 @@ body {
 }
 
 .profile-picture {
-  border-color: #ab937b;
+  border-color: #c1b09f;
+
 }
 
 .save-as-pdf-button {
@@ -26,27 +27,37 @@ body {
 }
 
 .skill {
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  background-color: #FBFAF9;
+  color: #252525;
   text-align: center;
-  background-color: rgb(241, 241, 241);
-  padding: 3px 10px;
-  border-radius: 1.5rem;
-  margin-right: 10px;
-  margin-bottom: 7px;
+  font-size: 12px;
+  padding: 3px;
 }
 
 .contactInfo {
-  background-color: #bdac9a;
+  background-color: #d9c9ba;
 }
 
 .infoItem {
-  border: 1px dashed #ab937b;
-  background-color: rgba(59, 59, 59, 0.04);
+  border: 2px solid #efefef;
+  border-radius: 5px;
+  background-color: #F7F6F5;
   color: #252525;
-  padding-left: 10px;
-  padding-right: 10px;
+  text-align: center;
+  font-size: 12px;
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
 .contactInfoBar {
   padding: 10px;
-  background-color: #e8dfdc;
+  background-color: #ffffff;
+}
+
+.vey-bg-light-brown {
+  border: 1px solid rgba(164, 142, 119, 0.25);
+  border-radius: 5px;
+  background-color: rgba(247, 246, 245, 0.56);
 }
