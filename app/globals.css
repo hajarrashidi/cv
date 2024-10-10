@@ -10,12 +10,12 @@ body {
 .profile-picture-frame {
   margin-left: auto;
   margin-right: auto;
-  padding: 0px;
 }
 
 .profile-picture {
-  border-color: #ab937b;
-  margin-bottom: 4px;
+  border-color: rgb(183 158 135 / 26%);
+  border-width: 7px;
+  opacity: 0.93;
 
 }
 
@@ -38,35 +38,39 @@ body {
 }
 
 .contactInfo {
-  background-color: #BDA997;
+  border: 6px solid rgba(171, 147, 123, 0.07);
+  background: radial-gradient(circle, rgb(167 140 115 / 61%) 0%, rgba(189, 169, 151, 0.8626609442060086) 35%, rgba(255, 255, 255, 0.15) 100%)
 }
 
 .infoItem {
-  background-color: #F7F6F5;
+  background-color: rgba(255, 255, 255, 0.55);
   color: #252525;
   text-align: center;
-  font-size: 12px;
-  padding: 9px;
+  font-size: 13px;
+  padding: 7px;
   margin-bottom: 5px;
 }
 
 @media (max-width: 768px) {
   .infoItem {
     font-size: 13px;
+    padding: 7px;
   }
 }
 
 @media (max-width: 768px) {
+
   .grid-container {
     grid-template-columns: 1fr;
   }
 }
 
 .contactInfoBar {
-  padding: 10px;
-  border-bottom-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.15);
+
+
 }
 
 .vey-bg-light-brown {
@@ -87,10 +91,6 @@ body {
 }
 
 @media print {
-  div.chapter, div.appendix {
-    page-break-after: always;
-  }
-
   @page {
     size: 21cm 29.7cm;
     margin: 0;

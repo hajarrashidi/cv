@@ -2,7 +2,7 @@ export const AboutMe = () => (
   <div className="bg-white rounded-lg p-3.5 md:p-6">
     <div className="flex flex-wrap">
       <div className="text-sm">
-        Hej, mitt namn är Hajar och jag har arbetat som systemutvecklare i 6 år. Jag jobbar
+        Hej, mitt namn är Hajar Rashidi och jag har arbetat som systemutvecklare i 6 år. Jag jobbar
         främst med fullstack utveckling.
 
         <br/><br/>

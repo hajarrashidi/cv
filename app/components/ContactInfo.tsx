@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const ContactInfo = ({infoItems}: { infoItems: InfoItemProps[] }) => (
     <div className="contactInfo rounded-lg">
-      <div className="flex flex-wrap justify-center pb-4 pt-5">
+      <div className="flex flex-wrap justify-center pb-4 pt-4">
         <div className="profile-picture-frame">
           <Profile/>
         </div>
