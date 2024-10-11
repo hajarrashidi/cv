@@ -11,7 +11,7 @@ export const ContactInfo = ({infoItems}: { infoItems: InfoItemProps[] }) => (
       <div className="contactInfoBar ">
         <div className="">
 
-          {infoItems.map(({label, content, type}, index) => (
+          {infoItems.map(({content, type}, index) => (
             <div key={index} className="infoItem rounded">
               {type === "phone" && <Link href={`tel:${content}`}>{content}</Link>}
               {type === "email" && <Link href={`mailto:${content}`}>{content}</Link>}

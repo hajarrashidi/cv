@@ -13,8 +13,8 @@ export const Main = () => {
   const {phone, email, workExperience, education, certificates} = cv;
 
   const infoItems: InfoItemProps[] = [
-    {label: "Phone", content: phone, type: "phone"},
-    {label: "Email", content: email, type: "email"},
+    {content: phone, type: "phone"},
+    {content: email, type: "email"},
   ];
 
   // Experience

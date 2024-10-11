@@ -1,4 +1,4 @@
-export const InfoItem = ({label, content}: InfoItemProps) => (
+export const InfoItem = ({content}: InfoItemProps) => (
   <div className="infoItem">
     {content}
   </div>

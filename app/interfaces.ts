@@ -1,5 +1,4 @@
 interface InfoItemProps {
-  label: string;
   content: string;
   type: string;
 }
