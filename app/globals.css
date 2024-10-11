@@ -6,17 +6,6 @@ body {
   background-color: #F4F2EE;
 }
 
-.profile-picture-frame {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.profile-picture {
-  border-color: rgb(183 158 135 / 26%);
-  border-width: 7px;
-  opacity: 0.97;
-
-}
 
 .save-as-pdf-button {
   background-color: #3b3b3b;
@@ -37,8 +26,22 @@ body {
 }
 
 .contactInfo {
-  border: 3px solid rgba(171, 147, 123, 0.07);
-  background: radial-gradient(circle, rgb(167 140 115 / 61%) 0%, rgba(189, 169, 151, 0.7626609442060086) 35%, rgba(255, 255, 255, 0.15) 100%);
+  border: 8px solid rgba(171, 147, 123, 0.07);
+  background: radial-gradient(circle, rgb(167 140 115 / 41%) 0%, rgba(219, 204, 191, 0.76) 25%, rgba(255, 255, 255, 0.15) 100%);
+}
+
+
+
+.profile-picture-frame {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-picture {
+  border-color: rgba(247, 243, 241, 0.50);
+  border-width: 7px;
+  opacity: 0.92;
+
 }
 
 .infoItem {
@@ -53,6 +56,10 @@ body {
 @media (max-width: 768px) {
   .infoItem {
     background-color: rgba(255, 255, 255, 0.48);
+  }
+
+  .contactInfo {
+    border: 10px solid rgba(171, 147, 123, 0.07);
   }
 }
 
