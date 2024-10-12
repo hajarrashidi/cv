@@ -1,8 +1,8 @@
-import {Main} from "@/app/components/Main";
+import {Cv} from "@/app/components/Page/Cv";
 
 const Page = () => {
   return (
-    <Main/>
+    <Cv/>
   );
 };
 

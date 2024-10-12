@@ -1,15 +1,17 @@
 // page json data
-import {cv} from "@/app/data";
+import {cv} from "@/app/content/cv";
 // Components
-import {ExperienceItem} from "@/app/components/ExperienceItem";
-import {EducationItem} from "@/app/components/EducationItem";
-import {Section} from "@/app/components/Section";
-import {ContactInfo} from "@/app/components/ContactInfo";
+import {Experience} from "@/app/components/Experience/Experience";
+import {Education} from "@/app/components/Education";
+import {Section} from "@/app/components/Layout/Section";
+import {Contact} from "@/app/components/Contact";
 import {Key} from "react";
-import {AboutMe} from "@/app/components/AboutMe";
-import {CertificateItem} from "@/app/components/CertificateItem";
+import {About} from "@/app/components/About";
+import {Certificate} from "@/app/components/Certificate";
+import {CardLayout} from "@/app/components/Layout/Card";
+import {NewCardLayout} from "@/app/components/Layout/Card/NewCardLayout";
 
-export const Main = () => {
+export const Cv = () => {
   const {phone, email, workExperience, education, certificates} = cv;
 
   const infoItems: InfoItemProps[] = [
@@ -20,21 +22,21 @@ export const Main = () => {
   // Experience
   const experienceItems = workExperience.map(
     (experience: Experience, index: Key) => (
-      <ExperienceItem key={index} experience={experience}/>
+      <Experience key={index} experience={experience}/>
     ),
   );
 
   // Education
   const educationItems = education.map(
     (educationItem: Education, index: Key) => (
-      <EducationItem key={index} education={educationItem}/>
+      <Education key={index} education={educationItem}/>
     ),
   );
 
   // Certificates
   const certificatesItems = certificates.map(
     (certificate: Certificate, index: Key) => (
-      <CertificateItem key={index} certificate={certificate}/>
+      <Certificate key={index} certificate={certificate}/>
     ),
   );
 
@@ -49,12 +51,15 @@ export const Main = () => {
 
           <div className="flex flex-col md:flex-row md:space-x-3">
             <div className="item">
+
+              {/* Contact */}
               <Section title="Kontakt Uppgifter">
-                <ContactInfo infoItems={infoItems}/>
+                <Contact infoItems={infoItems}/>
               </Section>
 
+              {/* About */}
               <Section title="Om mig">
-                <AboutMe/>
+                <About/>
               </Section>
 
               <Section title="Utbildning">{educationItems}</Section>

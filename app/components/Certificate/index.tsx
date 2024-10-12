@@ -1,12 +1,12 @@
-export const CertificateItem = ({certificate}: { certificate: Certificate }) => {
+import {NewCardLayout} from "@/app/components/Layout/Card/NewCardLayout";
+
+export const Certificate = ({certificate}: { certificate: Certificate }) => {
 
   const {name, date, organization, link} = certificate;
 
   return (
-    <div className="relative pb-2">
+    <NewCardLayout>
       <div className="bg-white rounded-lg p-3.5 md:p-6">
-
-
         <h2 className="text-sm font-semibold flex items-center pb-1">
           <span>{name}</span>
           {organization && (
@@ -23,9 +23,7 @@ export const CertificateItem = ({certificate}: { certificate: Certificate }) => 
         <a className="text-xs break-words" target="_blank" href={link}>
           {link}
         </a>
-
-
       </div>
-    </div>
+    </NewCardLayout>
   );
 };

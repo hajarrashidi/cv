@@ -1,10 +1,10 @@
-import {Card} from "@/app/components/Card";
+import {CardLayout} from "@/app/components/Layout/Card";
 
-export const EducationItem = ({education}: { education: Education }) => {
+export const Education = ({education}: { education: Education }) => {
   const {degree, description, institution, startDate, endDate} = education;
 
   return (
-    <Card
+    <CardLayout
       title={degree}
       subtitle={institution}
       dateRange={`${startDate} - ${endDate}`}

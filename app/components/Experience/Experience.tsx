@@ -1,11 +1,11 @@
-import {Card} from "@/app/components/Card";
+import {CardLayout} from "@/app/components/Layout/Card";
 
-export const ExperienceItem = ({experience}: { experience: Experience }) => {
+export const Experience = ({experience}: { experience: Experience }) => {
   const {position, company, startDate, endDate, description, assignments, skills} =
     experience;
 
   return (
-    <Card
+    <CardLayout
       title={position}
       subtitle={company}
       dateRange={`${startDate} - ${endDate}`}

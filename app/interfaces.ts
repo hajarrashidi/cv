@@ -9,7 +9,7 @@ interface SectionProps {
 }
 
 interface CardProps {
-  title: string;
+  title?: string;
   description?: string;
   subtitle?: string;
   dateRange: string;
