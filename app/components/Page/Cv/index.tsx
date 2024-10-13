@@ -10,11 +10,12 @@ import {About} from "@/app/components/About";
 import {Certificate} from "@/app/components/Certificate";
 
 export const Cv = () => {
-  const {phone, email, workExperience, education, certificates} = cv;
+  const {phone, email, workExperience, website, education, certificates} = cv;
 
   const infoItems: InfoItemProps[] = [
     {content: phone, type: "phone"},
     {content: email, type: "email"},
+    {content: website, type: "website"},
   ];
 
   // Experience

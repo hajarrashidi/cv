@@ -34,7 +34,7 @@ body {
 }
 
 .lightBrownCard {
-  border: 8px solid rgba(255, 255, 255, 0.28);
+  border: 8px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
   background: radial-gradient(circle, rgba(193, 182, 172, 1) 6%, rgba(171, 147, 123, 0.23) 60%, rgba(255, 255, 255, 0.3) 100%);
 }
@@ -52,8 +52,8 @@ body {
 }
 
 .infoItem {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #323232;
+  background-color: rgba(255, 255, 255, 0.33);
+  color: #4e4e4e;
   font-weight: 340;
   text-align: center;
   font-size: 13px;

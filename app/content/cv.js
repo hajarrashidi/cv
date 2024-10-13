@@ -3,6 +3,7 @@ export const cv = {
   phone: "+46 72 448 76 18",
   email: "hajarrashidi@gmail.com",
   dob: "1996-05-24",
+  website: "www.veycloud.com",
   github: "github.com/hajarrashidi",
   workExperience: [
     {
