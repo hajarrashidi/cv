@@ -8,7 +8,7 @@
   --bg-color: #F4F2EE;
   --text-color: #252525;
   --light-text-color: #4e4e4e;
-  --border-color: #efefef;
+  --border-color: #baa28b3d;
   --hover-color: #fff1e3;
   --card-bg: #FBFAF9;
   --light-brown: rgba(212, 190, 167, 0.16);
@@ -51,12 +51,10 @@ body {
 }
 
 .card-frame {
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #9d7145a7 0%, #efe2d2 50%, #9d7d5b 100%);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #9d7145a7 0%, #efe2d2 50%, #9d7d5b 100%);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card-frame::before {
@@ -67,6 +65,7 @@ body {
   width: 300%;
   height: 300%;
   transform: rotate(30deg);
+  z-index: 2;
 }
 
 .card-frame::before {
@@ -103,19 +102,23 @@ body {
   }
 }
 
-.card-frame .card-contact-link.rounded-lg {
+.card-contact-link {
   position: relative;
+  z-index: 4;
+}
+
+.profile-picture-frame {
+  padding-top: 0.35rem;
+  padding-bottom: 0.3rem;
   z-index: 1;
 }
 
 .profile-picture {
-  z-index: 2;
+  opacity: 0.92;
+  border: 6px solid rgba(171, 147, 123, 0.31);
+  border-radius: 100%;
   position: relative;
-}
-
-/* Profile picture styles */
-.profile-picture-frame {
-  margin: 0 auto;
+  z-index: 1;
 }
 
 /* Info and contact styles */
@@ -130,6 +133,7 @@ body {
 }
 
 .card-contact-link-bar {
+  z-index: 4;
   margin: 0.5rem;
   padding: 0.5rem 0.5rem 0.25rem;
   background-color: var(--contact-bg);
@@ -152,15 +156,6 @@ body {
   line-height: 1.3rem;
 }
 
-@keyframes borderFade {
-  0% {
-    border-color: #BAA28B;
-  }
-  100% {
-    border-color: #baa28b41;
-  }
-}
-
 /* Media queries */
 @media print {
   @page {
@@ -174,5 +169,42 @@ body {
     font-weight: 440;
     font-size: 0.89rem;
     line-height: 1.2rem;
+  }
+
+  .card-frame::before {
+    top: -80%;
+    left: -80%;
+    width: 260%;
+    height: 260%;
+  }
+
+  @keyframes straightShineEffect {
+    0% {
+      opacity: 0;
+      transform: translateX(-80%) translateY(-80%) rotate(30deg);
+    }
+    10% {
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(-26.67%) translateY(-26.67%) rotate(30deg);
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.682) 50%,
+        transparent
+      );
+    }
+    60% {
+      opacity: 0.95;
+    }
+    70% {
+      opacity: 0.9;
+    }
+    80%, 90%, 100% {
+      opacity: 0;
+      transform: translateX(26.67%) translateY(26.67%) rotate(30deg);
+    }
   }
 }
