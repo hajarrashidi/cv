@@ -40,4 +40,5 @@ interface Certificate {
   organization: string;
   date: string;
   link: string;
+  description?: string;
 }

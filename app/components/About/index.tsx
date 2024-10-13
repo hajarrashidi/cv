@@ -17,7 +17,7 @@ export const About: React.FC = () => {
         <p>{aboutContent.interests}</p>
         <p className="mb-2">{aboutContent.cvInfo}</p>
         <a
-          className="inline-flex items-center text-gray-500  hover:text-gray-900 hover:border-b-2 hover:border-gray-700 transition duration-1000"
+          className="inline-flex items-center text-gray-500  hover:text-gray-900 hover:border-gray-700 transition duration-1000"
           href={aboutContent.githubLink}
           target="_blank"
           rel="noopener noreferrer"

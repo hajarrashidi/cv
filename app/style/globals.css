@@ -1,16 +1,18 @@
+/* Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Root variables */
 :root {
   --bg-color: #F4F2EE;
   --text-color: #252525;
   --light-text-color: #4e4e4e;
   --border-color: #efefef;
-  --hover-color: #B2987F;
+  --hover-color: #fff1e3;
   --card-bg: #FBFAF9;
   --light-brown: rgba(212, 190, 167, 0.16);
-  --profile-border: rgba(171, 147, 123, 0.31);
+  --profile-border: rgba(216, 209, 202, 0.654);
   --info-bg: rgba(255, 255, 255, 0.33);
   --contact-bg: rgba(255, 255, 255, 0.30);
   --light-brown-bg: rgba(247, 246, 245, 0.56);
@@ -18,11 +20,13 @@
   --section-color: #665a47;
 }
 
+/* Base styles */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
 
+/* Button styles */
 .save-as-pdf-button {
   background-color: #3b3b3b;
   transition: background-color 0.3s ease;
@@ -32,6 +36,7 @@ body {
   background-color: var(--hover-color);
 }
 
+/* Skill and card styles */
 .skill {
   border: 1px solid var(--border-color);
   border-radius: 5px;
@@ -42,25 +47,122 @@ body {
 }
 
 .xd {
-  background-color: var(--light-brown);
+  background-color: #ffffffd1;
 }
 
-.lightBrownCard {
-  border: 8px solid rgba(255, 255, 255, 0.14);
+.card-frame {
+  border: none;
   border-radius: 8px;
-  background: radial-gradient(circle, rgba(193, 182, 172, 1) 6%, rgba(171, 147, 123, 0.23) 60%, rgba(255, 255, 255, 0.3) 100%);
+  background: linear-gradient(135deg, #9d7145a7 0%, #efe2d2 50%, #9d7d5b 100%);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background 2s ease;
 }
 
+.card-frame::before,
+.card-frame::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 0.4) 70%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: rotate(45deg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card-frame::before {
+  animation: fadeShineEffect 4s infinite 2s;
+}
+
+.card-frame::after {
+  animation: fadeShineEffect 8s infinite 6s;
+}
+
+@keyframes fadeShineEffect {
+  0%, 100% {
+    opacity: 0;
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0%) translateY(0%) rotate(45deg);
+    background: radial-gradient(
+      ellipse at center,
+      #baa28b2d 0%,
+      rgba(255, 255, 255, 0.211) 66%,
+      rgba(255, 255, 255, 0) 70%
+    );
+  }
+}
+
+.card-frame:hover::before,
+.card-frame:hover::after {
+  animation: none;
+}
+
+
+.card-frame .card-contact-link.rounded-lg {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-picture {
+  z-index: 2;
+  position: relative;
+}
+
+/* Profile picture styles */
 .profile-picture-frame {
   margin: 0 auto;
 }
 
 .profile-picture {
-  opacity: 0.92;
-  border: 6px solid var(--profile-border);
+  opacity: 0.98;
+  border: 4px solid var(--profile-border);
+  animation: borderFade 4s infinite alternate;
+  position: relative;
+  overflow: hidden;
 }
 
-.infoItem {
+.profile-picture::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  animation: profileShineEffect 6s infinite;
+}
+
+@keyframes profileShineEffect {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  50%, 100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* Info and contact styles */
+.card-contact-link {
   background-color: var(--info-bg);
   color: var(--light-text-color);
   font-weight: 340;
@@ -70,30 +172,39 @@ body {
   margin-bottom: 0.25rem;
 }
 
-.contactInfoBar {
+.card-contact-link-bar {
   margin: 0.5rem;
   padding: 0.5rem 0.5rem 0.25rem;
   background-color: var(--contact-bg);
 }
 
-.vey-bg-light-brown {
-  border: 1px solid rgba(164, 142, 119, 0.25);
-  border-radius: 4px;
-  background-color: var(--light-brown-bg);
-}
-
-.tips {
-  background-color: var(--tips-bg);
-  padding: 0.625rem;
-  font-size: 0.8rem;
-  line-height: 1.2rem;
-}
-
-.section {
+.layout-section {
   font-weight: 340;
   color: var(--section-color);
 }
 
+.cv-row-half {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Card title styles */
+.card-title {
+  font-weight: 340;
+  font-size: 0.92rem;
+  line-height: 1.3rem;
+}
+
+@keyframes borderFade {
+  0% {
+    border-color: #BAA28B;
+  }
+  100% {
+    border-color: #baa28b41;
+  }
+}
+
+/* Media queries */
 @media print {
   @page {
     size: 21cm 29.7cm;
@@ -101,31 +212,8 @@ body {
   }
 }
 
-.grid-container {
-  display: grid;
-  gap: 1rem;
-  width: 100%;
-}
-
-.grid-item {
-  padding: 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.item {
-  flex: 1;
-  min-width: 0;
-}
-
-.cardTitle {
-  font-weight: 340;
-  font-size: 0.92rem;
-  line-height: 1.3rem;
-}
-
 @media (max-width: 768px) {
-  .cardTitle {
+  .card-title {
     font-weight: 440;
     font-size: 0.89rem;
     line-height: 1.2rem;

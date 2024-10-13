@@ -24,7 +24,7 @@ export const Cv = () => {
     <main id="page" className="m-0 p-0 min-h-screen pl-3 pr-3 pt-0 pb-8">
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row md:space-x-3">
-          <div className="item">
+          <div className="cv-row-half">
             <Section title="Kontakt Uppgifter">
               <Contact infoItems={infoItems} />
             </Section>
@@ -46,7 +46,7 @@ export const Cv = () => {
             </Section>
           </div>
 
-          <div className="item">
+          <div className="cv-row-half">
             <Section title="Arbetslivserfarenhet">
               {workExperience.map((experience, index) => (
                 <Experience key={index} experience={experience} />

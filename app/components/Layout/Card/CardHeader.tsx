@@ -4,7 +4,7 @@ interface CardHeaderProps {
 }
 
 export const CardHeader = ({title, secondTitle}: CardHeaderProps) => (
-  <h3 className="cardTitle font-semibold flex items-center pb-1">
+  <h3 className="card-title font-semibold flex items-center pb-1">
 
     <span>{title}</span>
     {secondTitle && (

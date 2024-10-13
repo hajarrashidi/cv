@@ -305,12 +305,21 @@ export const cv = {
       organization: "freeCodeCamp",
       date: "April 2024",
       link: "https://freecodecamp.org/certification/hajarrashidi/foundational-c-sharp-with-microsoft",
+      
     },
     {
       name: "Intermediate SQL Queries",
       organization: "DataCamp",
       date: "November 2023",
       link: "https://www.datacamp.com/completed/statement-of-accomplishment/course/fdc9d9190965813212b03d90ffd46274a6301448",
+      
+    },
+    {
+      name: "Rotarys antimobbningsprojekt",
+      organization: "Rotary",
+      date: "2012",
+      description: "Hajar Rashidi har tilldelats Rotarys stipendium för att ha medverkat till antimobbning på skolan",
+      location: "Linköping, Ånestadskolan",
     },
   ],
 };
