@@ -2,35 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #F4F2EE;
+:root {
+  --bg-color: #F4F2EE;
+  --text-color: #252525;
+  --light-text-color: #4e4e4e;
+  --border-color: #efefef;
+  --hover-color: #B2987F;
+  --card-bg: #FBFAF9;
+  --light-brown: rgba(212, 190, 167, 0.16);
+  --profile-border: rgba(171, 147, 123, 0.31);
+  --info-bg: rgba(255, 255, 255, 0.33);
+  --contact-bg: rgba(255, 255, 255, 0.30);
+  --light-brown-bg: rgba(247, 246, 245, 0.56);
+  --tips-bg: #bda9971a;
+  --section-color: #665a47;
 }
 
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
 
 .save-as-pdf-button {
   background-color: #3b3b3b;
+  transition: background-color 0.3s ease;
 }
 
 .save-as-pdf-button:hover {
-  background-color: #B2987F;
+  background-color: var(--hover-color);
 }
 
 .skill {
-  border: 1px solid #efefef;
+  border: 1px solid var(--border-color);
   border-radius: 5px;
-  background-color: #FBFAF9;
-  color: #252525;
+  background-color: var(--card-bg);
   text-align: center;
-  font-size: 12px;
-  padding: 3px;
+  font-size: 0.75rem;
+  padding: 0.1875rem;
 }
-
-.contactInfo {
-}
-
 
 .xd {
-  background-color: rgba(212, 190, 167, 0.16);
+  background-color: var(--light-brown);
 }
 
 .lightBrownCard {
@@ -39,58 +51,53 @@ body {
   background: radial-gradient(circle, rgba(193, 182, 172, 1) 6%, rgba(171, 147, 123, 0.23) 60%, rgba(255, 255, 255, 0.3) 100%);
 }
 
-
 .profile-picture-frame {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .profile-picture {
   opacity: 0.92;
-  border: 6px solid rgba(171, 147, 123, 0.31);
-
+  border: 6px solid var(--profile-border);
 }
 
 .infoItem {
-  background-color: rgba(255, 255, 255, 0.33);
-  color: #4e4e4e;
+  background-color: var(--info-bg);
+  color: var(--light-text-color);
   font-weight: 340;
   text-align: center;
-  font-size: 13px;
-  padding: 8px;
-  margin-bottom: 4px;
+  font-size: 0.8125rem;
+  padding: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
-
 .contactInfoBar {
-  margin: 8px;
-  padding: 8px 8px 4px 8px;
-  background-color: rgba(255, 255, 255, 0.30);
+  margin: 0.5rem;
+  padding: 0.5rem 0.5rem 0.25rem;
+  background-color: var(--contact-bg);
 }
 
 .vey-bg-light-brown {
   border: 1px solid rgba(164, 142, 119, 0.25);
   border-radius: 4px;
-  background-color: rgba(247, 246, 245, 0.56);
+  background-color: var(--light-brown-bg);
 }
 
 .tips {
-  background-color: #bda9971a;
-  padding: 10px;
-  font-size: 0.800rem; /* 14px */
-  line-height: 1.20rem; /* 20px */
+  background-color: var(--tips-bg);
+  padding: 0.625rem;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
 }
 
 .section {
   font-weight: 340;
-  color: #665a47;
+  color: var(--section-color);
 }
 
 @media print {
   @page {
     size: 21cm 29.7cm;
     margin: 0;
-    /* change the margins as you want them to be. */
   }
 }
 
@@ -102,7 +109,6 @@ body {
 
 .grid-item {
   padding: 0;
-  /* Ensure no other styles are affecting the width */
   width: 100%;
   box-sizing: border-box;
 }
@@ -114,16 +120,14 @@ body {
 
 .cardTitle {
   font-weight: 340;
-  font-size: 0.920rem; /* 14px */
-  line-height: 1.3rem; /* 20px */
+  font-size: 0.92rem;
+  line-height: 1.3rem;
 }
 
 @media (max-width: 768px) {
-
   .cardTitle {
     font-weight: 440;
-    font-size: 0.890rem; /* 14px */
-    line-height: 1.2rem; /* 20px */
+    font-size: 0.89rem;
+    line-height: 1.2rem;
   }
-
 }
