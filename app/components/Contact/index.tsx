@@ -16,6 +16,7 @@ export const Contact = ({infoItems}: { infoItems: InfoItemProps[] }) => (
                       width={138}
                       height={138}
                       className="profile-picture"
+                      priority
                     />
                     {/*<h1 className="text-center text-2xl mt-2.5">Hajar Rashidi</h1>*/}
                   </div>
