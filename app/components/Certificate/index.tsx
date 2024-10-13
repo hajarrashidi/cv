@@ -1,7 +1,6 @@
 import {CardLayout} from "@/app/components/Layout/Card/Index";
 import {CardDate} from "@/app/components/Layout/Card/CardDate";
 import {CardHeader} from "@/app/components/Layout/Card/CardHeader";
-import {CardDescription} from "@/app/components/Layout/Card/CardDescription";
 
 export const Certificate = ({certificate}: { certificate: Certificate }) => {
 
@@ -18,10 +17,12 @@ export const Certificate = ({certificate}: { certificate: Certificate }) => {
           {description}
         </div>
       )}
- 
-      
+
+
       <div className="pt-1.5 ">
-        <a className="text-xs break-words hover:text-gray-900 hover:border-b hover:border-gray-700 transition duration-1000" target="_blank" href={link}>
+        <a
+          className="text-xs break-words hover:text-gray-900 hover:border-b hover:border-gray-700 transition duration-1000"
+          target="_blank" href={link}>
           {link}
         </a>
       </div>

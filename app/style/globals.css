@@ -26,17 +26,16 @@ body {
   color: var(--text-color);
 }
 
-/* Button styles */
+/* Component styles */
 .save-as-pdf-button {
   background-color: #3b3b3b;
   transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--hover-color);
+  }
 }
 
-.save-as-pdf-button:hover {
-  background-color: var(--hover-color);
-}
-
-/* Skill and card styles */
 .skill {
   border: 1px solid var(--border-color);
   border-radius: 5px;
@@ -53,25 +52,71 @@ body {
 .card-frame {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #b79970a7 0%, #f3eae0 50%, #b79e85 100%);
+  background: linear-gradient(135deg, #b79970a7 0%, #f3eae0 50%, #d3baa1 90%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    transform: rotate(30deg);
+    z-index: 2;
+    animation: straightShineEffect 1s cubic-bezier(0.1, 0.05, 0.1, 0.1) 1, straightShineEffect 8s cubic-bezier(0.1, 0.05, 0.1, 0.1) infinite 4s;
+  }
 }
 
-.card-frame::before {
-  content: '';
-  position: absolute;
-  top: -100%;
-  left: -100%;
-  width: 300%;
-  height: 300%;
-  transform: rotate(30deg);
-  z-index: 2;
+.card-contact-link {
+  position: relative;
+  z-index: 4;
+  background-color: var(--info-bg);
+  color: var(--light-text-color);
+  font-weight: 340;
+  text-align: center;
+  font-size: 0.8125rem;
+  padding: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
-.card-frame::before {
-  animation: straightShineEffect 1.8s cubic-bezier(0.15, 0.05, 0.1, 0.1) 1, straightShineEffect 8s cubic-bezier(0.15, 0.05, 0.1, 0.1) infinite 8s;
-
+.card-contact-link-bar {
+  z-index: 4;
+  margin: 0.5rem;
+  padding: 0.5rem 0.5rem 0.25rem;
+  background-color: var(--contact-bg);
 }
 
+.profile-picture-frame {
+  padding-top: 0.35rem;
+  padding-bottom: 0.3rem;
+  z-index: 1;
+}
+
+.profile-picture {
+  opacity: 0.92;
+  border: 6px solid rgba(171, 147, 123, 0.31);
+  border-radius: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.layout-section {
+  font-weight: 340;
+  color: var(--section-color);
+}
+
+.cv-row-half {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-title {
+  font-weight: 340;
+  font-size: 0.92rem;
+  line-height: 1.3rem;
+}
+
+/* Animations */
 @keyframes straightShineEffect {
   0% {
     opacity: 0;
@@ -105,60 +150,6 @@ body {
     opacity: 0;
     transform: translateX(33.33%) translateY(33.33%) rotate(30deg);
   }
-}
-
-.card-contact-link {
-  position: relative;
-  z-index: 4;
-}
-
-.profile-picture-frame {
-  padding-top: 0.35rem;
-  padding-bottom: 0.3rem;
-  z-index: 1;
-}
-
-.profile-picture {
-  opacity: 0.92;
-  border: 6px solid rgba(171, 147, 123, 0.31);
-  border-radius: 100%;
-  position: relative;
-  z-index: 1;
-}
-
-/* Info and contact styles */
-.card-contact-link {
-  background-color: var(--info-bg);
-  color: var(--light-text-color);
-  font-weight: 340;
-  text-align: center;
-  font-size: 0.8125rem;
-  padding: 0.5rem;
-  margin-bottom: 0.25rem;
-}
-
-.card-contact-link-bar {
-  z-index: 4;
-  margin: 0.5rem;
-  padding: 0.5rem 0.5rem 0.25rem;
-  background-color: var(--contact-bg);
-}
-
-.layout-section {
-  font-weight: 340;
-  color: var(--section-color);
-}
-
-.cv-row-half {
-  flex: 1;
-  min-width: 0;
-}
-
-/* Card title styles */
-.card-title {
-  font-weight: 340;
-  font-size: 0.92rem;
-  line-height: 1.3rem;
 }
 
 /* Media queries */

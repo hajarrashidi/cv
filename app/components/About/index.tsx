@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardLayout } from "@/app/components/Layout/Card/Index";
+import {CardLayout} from "@/app/components/Layout/Card/Index";
 
 const aboutContent = {
   introduction: "Hej, mitt namn är Hajar Rashidi och jag har arbetat som systemutvecklare i ungefär 7 år. För närvarande arbetar jag som konsult på Sogeti, där jag främst fokuserar på webbutveckling.",
