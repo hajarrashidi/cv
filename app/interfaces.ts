@@ -39,6 +39,6 @@ interface Certificate {
   name: string;
   organization: string;
   date: string;
-  link: string;
+  link?: string;
   description?: string;
 }
