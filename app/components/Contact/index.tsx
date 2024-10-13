@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import {NewCardLayout} from "@/app/components/Layout/Card/NewCardLayout";
+import {CardLayout} from "@/app/components/Layout/Card/Index";
 
 export const Contact = ({infoItems}: { infoItems: InfoItemProps[] }) => (
-      <NewCardLayout padding={false}>
+      <CardLayout padding={false}>
         <div className="contactInfo">
           <div className="xd">
             <div className="lightBrownCard">
@@ -13,18 +13,18 @@ export const Contact = ({infoItems}: { infoItems: InfoItemProps[] }) => (
                     <Image
                       src="/images/work_picture.avif"
                       alt="Profile"
-                      width={132}
-                      height={132}
+                      width={138}
+                      height={138}
                       className="rounded-full profile-picture object-cover"
                     />
                     {/*<h1 className="text-center text-2xl mt-2.5">Hajar Rashidi</h1>*/}
                   </div>
                 </div>
               </div>
-              <div className="contactInfoBar ">
+              <div className="contactInfoBar rounded-lg ">
                 <div className="">
                   {infoItems.map(({content, type}, index) => (
-                    <div key={index} className="infoItem rounded">
+                    <div key={index} className="infoItem rounded-lg">
                       {type === "phone" && <Link href={`tel:${content}`}>{content}</Link>}
                       {type === "email" && <Link href={`mailto:${content}`}>{content}</Link>}
                     </div>
@@ -35,6 +35,6 @@ export const Contact = ({infoItems}: { infoItems: InfoItemProps[] }) => (
           </div>
 
         </div>
-      </NewCardLayout>
+      </CardLayout>
   )
 ;

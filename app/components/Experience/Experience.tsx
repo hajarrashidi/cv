@@ -1,23 +1,20 @@
-import {CardLayout} from "@/app/components/Layout/Card";
+import {CardLayout} from "@/app/components/Layout/Card/Index";
+import {CardDate} from "@/app/components/Layout/Card/CardDate";
+import {CardHeader} from "@/app/components/Layout/Card/CardHeader";
+import {CardDescription} from "@/app/components/Layout/Card/CardDescription";
 
 export const Experience = ({experience}: { experience: Experience }) => {
   const {position, company, startDate, endDate, description, assignments, skills} =
     experience;
 
   return (
-    <CardLayout
-      title={position}
-      subtitle={company}
-      dateRange={`${startDate} - ${endDate}`}
-      content={
-        <>
+    <CardLayout>
+      <CardHeader title={position} secondTitle={company}/>
+      <CardDate startDate={startDate} endDate={endDate}/>
+      <div className="text-xs mt-2">
 
-          <div className="">
-            <h3 className="text-xs font-bold text-gray-600 pb-1">Beskrivning</h3>
-            <p className="text-sm whitespace-pre-wrap">
-              {description}
-            </p>
-          </div>
+        <>
+          <CardDescription description={description}/>
 
           {assignments?.length && (
             <div className="mt-3">
@@ -53,7 +50,9 @@ export const Experience = ({experience}: { experience: Experience }) => {
             </div>
           )}
         </>
-      }
-    />
+
+      </div>
+    </CardLayout>
+
   );
 };

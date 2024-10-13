@@ -1,7 +1,7 @@
-import {NewCardLayout} from "@/app/components/Layout/Card/NewCardLayout";
+import {CardLayout} from "@/app/components/Layout/Card/Index";
 
 export const About = () => (
-  <NewCardLayout>
+  <CardLayout>
       <div className="flex flex-wrap">
         <div className="text-sm">
           Hej, mitt namn är Hajar Rashidi och jag har arbetat som systemutvecklare i 6 år. Jag jobbar
@@ -24,5 +24,5 @@ export const About = () => (
           </div>
         </div>
       </div>
-  </NewCardLayout>
+  </CardLayout>
 );

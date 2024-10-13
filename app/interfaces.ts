@@ -18,7 +18,7 @@ interface CardProps {
 
 interface Experience {
   position: string;
-  description?: string;
+  description: string;
   company: string;
   startDate: string;
   endDate: string;
@@ -28,7 +28,7 @@ interface Experience {
 
 interface Education {
   degree: string;
-  description?: string;
+  description: string;
   institution: string;
   startDate: string;
   endDate: string;

@@ -8,8 +8,6 @@ import {Contact} from "@/app/components/Contact";
 import {Key} from "react";
 import {About} from "@/app/components/About";
 import {Certificate} from "@/app/components/Certificate";
-import {CardLayout} from "@/app/components/Layout/Card";
-import {NewCardLayout} from "@/app/components/Layout/Card/NewCardLayout";
 
 export const Cv = () => {
   const {phone, email, workExperience, education, certificates} = cv;
@@ -64,7 +62,7 @@ export const Cv = () => {
 
               <Section title="Utbildning">{educationItems}</Section>
 
-              <Section title="Certifikat">
+              <Section title="Certifikat & Diplom">
                 {certificatesItems}
               </Section>
 
@@ -74,7 +72,6 @@ export const Cv = () => {
             <div className="item">
               <Section title="Arbetslivserfarenhet">{experienceItems}</Section>
             </div>
-
 
           </div>
         </div>
