@@ -11,11 +11,13 @@ export const cv = {
       role: "Fullstack",
       title: "Fullstack Software Engineer at Sogeti",
       description:
-        "Under sin tid på Sogeti har Hajar fokuserat på webbutveckling inom flera projekt. Han har arbetat med SSAB WearIQ:s hemsida och API, byggda med Node.js och Vue.js, där han ansvarat för förvaltning och förbättring av webbplattformarna. Hos Oskarshamns kärnkraftverk var han ansvarig för underhåll av en webbapplikation utvecklad i WordPress och säkerställde att den fungerade optimalt. På Mittuniversitetet ledde Hajar integrationen av BankID i ett befintligt system med fokus på säkerhet och prestanda. Han utvecklade även ett open source-bibliotek för att underlätta BankID-integration för andra utvecklare. Hos Stångåstaden AB förvaltade och vidareutvecklade han Studentbostäders webbplats i WordPress och implementerade nya funktioner för att förbättra användarupplevelsen. Genom dessa uppdrag har Hajar visat sin förmåga att effektivt arbeta med olika webbutvecklingsteknologier och anpassa sig till olika projektbehov.",
+        "Hajar har arbetat med flera webbutvecklingsprojekt på Sogeti. Han har ansvarat för SSAB WearIQ:s hemsida som är skriven i React, underhållit Oskarshamns kärnkraftverk, integrerat BankID för Mittuniversitetet, vidareutvecklat Studentbostader.se i React & PHP, och arbetat med interna system för flygtrafikledning hos LFV.",
       company: "Sogeti",
       location: "Linköping",
-      startDate: "March 2022",
+      startDate: "Mar 2022",
       endDate: "Nuvarande",
+      new_startDate: "2022-03-01",
+      new_endDate: "Nuvarande",
       logotype: "/images/sogeti.png",
       skills: [
         // Frontend
@@ -30,6 +32,7 @@ export const cv = {
         {title: "Node.js"},
         {title: "PHP"},
         {title: "Laravel"},
+        {title: "C#"},
         // Mobile
         {title: "Android Studio"},
         {title: "Flutter"},
@@ -57,23 +60,24 @@ export const cv = {
       assignments: [
         {
           title: "LFV",
-          period: "November 2023 – Nuvarande",
+          period: "Nov 2023 – Nuvarande",
           role: "Fullstack-utvecklare",
           description:
-            "Hajar arbetar med att utveckla och underhålla LFV:s interna system för flygtrafikledning. Han använder sin expertis inom fullstack-utveckling för att förbättra systemets funktionalitet och användarupplevelse.",
+            "Utvecklar och förvaltar LFV.se samt migrerar gammal kod till .NET 8.",
           skills: [
             {title: "React.js"},
             {title: "Node.js"},
             {title: "TypeScript"},
             {title: "Azure DevOps"},
+            {title: "C#"},
           ],
         },
         {
           title: "SSAB",
-          period: "October 2023",
+          period: "Oct 2023",
           role: "Systemutvecklare",
           description:
-            "Hajar förvaltade SSAB WearIQ:s mobilapp, hemsida och API. Appen är utvecklad i Flutter, medan hemsidan och API:et är utvecklade i Node.js, med Vue.js för frontend. Hans arbete säkerställde en sömlös drift och förbättring av dessa plattformar, med fokus på användarupplevelse och systemintegration.",
+            "Förvaltade SSAB WearIQ:s mobilapp (Flutter), hemsida och API (Node.js, Vue.js).",
           skills: [
             {title: "HTML"},
             {title: "CSS"},
@@ -93,10 +97,10 @@ export const cv = {
         },
         {
           title: "Oskarshamns kärnkraftverk",
-          period: "October 2023",
+          period: "Oct 2023",
           role: "Systemutvecklare",
           description:
-            "Hajar förvaltade OKG:s mobilapp och webbapp. Hemsidan var utvecklad i WordPress och mobilappen i Flutter. Han såg till att båda plattformarna var uppdaterade och fungerade optimalt, med särskilt fokus på säkerhet och prestanda i den känsliga miljön.",
+            "Förvaltade OKG:s mobilapp (Flutter) och webbapp (WordPress) med fokus på säkerhet och prestanda.",
           skills: [
             {title: "HTML"},
             {title: "CSS"},
@@ -113,10 +117,10 @@ export const cv = {
         },
         {
           title: "Mittuniversitetet",
-          period: "January 2023 – September 2023",
+          period: "Jan 2023 – Sep 2023",
           role: "Fullstack-utvecklare",
           description:
-            "Hajar hade en ledande roll i att integrera BankID i ett befintligt system hos Mittuniversitetet. Han designade och implementerade integrationen med starkt fokus på säkerhet och prestanda. Genom att identifiera ett bredare behov utvecklade han även ett open source-bibliotek för att hjälpa andra utvecklare att mer effektivt integrera BankID version 6, vilket demonstrerade hans förmåga att tänka innovativt och bidra till utvecklargemenskapen.",
+            "Ledde BankID-integration i befintligt system och utvecklade ett open source-bibliotek för BankID version 6.",
           skills: [
             {title: "HTML"},
             {title: "CSS"},
@@ -131,10 +135,10 @@ export const cv = {
         },
         {
           title: "Stångåstaden AB",
-          period: "August 2022 – January 2023",
+          period: "Aug 2022 – Jan 2023",
           role: "Fullstack-utvecklare",
           description:
-            "Som fullstack-utvecklare var Hajar ansvarig för förvaltning och fortsatt utveckling av webbsidan för Studentbostäder, byggd i WordPress. Han säkerställde att webbplatsen mötte behoven hos studenter som söker boende och implementerade nya funktioner vid behov. Hans arbete fokuserade på att förbättra användarupplevelsen och optimera webbplatsens prestanda.",
+            "Förvaltade och vidareutvecklade Studentbostäders WordPress-webbplats med fokus på användarupplevelse och prestanda.",
           skills: [
             {title: "HTML"},
             {title: "CSS"},
@@ -152,12 +156,14 @@ export const cv = {
       position: "Software Engineer",
       title: "Fullstack Software Engineer at Prek",
       description:
-        "På Prek arbetade Hajar som fullstackutvecklare i ett team med ett mäklarsystem kallat Fasad. Han hade ansvar för både frontend och backend. Under sina två år på Prek arbetade han med allt från förvaltning till nyutveckling, vilket gav honom bred erfarenhet inom systemutveckling och projekthantering.",
+        "Arbetade som fullstackutvecklare i ett team med mäklarsystemet Fasad. Ansvarade för både frontend och backend, från förvaltning till nyutveckling.",
       role: "Fullstack",
       company: "Prek",
       location: "Linköping",
-      startDate: "January 2020",
-      endDate: "March 2022",
+      startDate: "Jan 2020",
+      endDate: "Mar 2022",
+      new_startDate: "2020-01-01",
+      new_endDate: "2022-03-31",
       logotype: "/images/prek.png",
       skills: [
         {title: "HTML"},
@@ -181,11 +187,13 @@ export const cv = {
       title: "Fullstack Software Engineer at Intiro",
       role: "Fullstack",
       description:
-        "RTI Group tillverkar kalibreringsinstrument för röntgenmaskiner. Som konsult på Intiro utvecklade Hajar en mobilapp i Xamarin som kommunicerar via Bluetooth med kalibreringsinstrumentet. Instrumentet används inom vården för att säkerställa att patienter inte utsätts för överdriven strålning. Hajar skapade ett användarvänligt gränssnitt för datainsamling och visualisering, använde Figma för prototypdesign och säkerställde smidig kommunikation mellan appen och instrumentet. Detta projekt demonstrerade hans förmåga att arbeta med specialiserad teknik och skapa lösningar för kritiska användningsområden.",
+        "Utvecklade en Xamarin-mobilapp för RTI Group som kommunicerar via Bluetooth med kalibreringsinstrument för röntgenmaskiner. Skapade användargränssnitt för datainsamling och visualisering.",
       company: "Intiro",
       location: "Linköping",
-      startDate: "August 2019",
-      endDate: "December 2019",
+      startDate: "Aug 2019",
+      endDate: "Dec 2019",
+      new_startDate: "2019-08-01",
+      new_endDate: "2019-12-31",
       logotype: "/images/intiro.png",
       skills: [
         {title: "HTML"},
@@ -206,12 +214,14 @@ export const cv = {
       position: "Full Stack Developer",
       title: "Fullstack Developer at JobTip AB",
       description:
-        "Inom JobTip var Hajar ansvarig för utvecklingen av algoritmer för att effektivt matcha potentiella kandidater med lämpliga annonser via sociala medieplattformar. Hans arbetsansvar inkluderade också förbättring och vidareutveckling av JobTips interna publiceringsverktyg, baserat på Laravel-ramverket och Vue. Han genomförde även funktionella tester samt enhetstester, vilket bidrog till att säkerställa hög kvalitet och pålitlighet i systemet.",
+        "Utvecklade matchningsalgoritmer för jobbkandidater och annonser via sociala medier. Förbättrade JobTips interna publiceringsverktyg baserat på Laravel och Vue. Genomförde funktionella tester och enhetstester.",
       role: "Fullstack",
       company: "JobTip AB",
       location: "Göteborg",
-      startDate: "February 2019",
-      endDate: "July 2019",
+      startDate: "Feb 2019",
+      endDate: "Jul 2019",
+      new_startDate: "2019-02-01",
+      new_endDate: "2019-07-31",
       logotype: "/images/jobtip.png",
       skills: [
         {title: "HTML"},
@@ -231,12 +241,14 @@ export const cv = {
       position: "Software Developer",
       title: "Software Developer at Stratsys AB",
       description:
-        "På Stratsys, ett företag som utvecklar molnbaserad mjukvara för strategisk planering, arbetade Hajar i ett team om fem personer. Han ansvarade för utveckling och underhåll av API:er med hjälp av .NET Core och C#. Han designade databastabeller för optimerad datalagring och -hämtning samt implementerade integreringar med externa tjänster och system. I samarbete med frontend-teamet utvecklade han backend-lösningar till Vue.js-applikationer. Hajar använde Jira för effektiv projektstyrning och deltog aktivt i Scrum-processen för agil utveckling, vilket förbättrade teamets produktivitet och samarbete.",
+        "Utvecklade och underhöll API:er med .NET Core och C#. Designade databastabeller, implementerade integreringar med externa tjänster, och utvecklade backend-lösningar för Vue.js-applikationer. Använde Jira och Scrum för projektstyrning. Hajar genomförde även LIA 1 och LIA 2 (Lärande i Arbete) på Stratsys, vardera period omfattande 3 månader.",
       role: "Fullstack",
       company: "Stratsys AB",
       location: "Göteborg",
-      startDate: "June 2018",
-      endDate: "January 2019",
+      startDate: "Jun 2018",
+      endDate: "Jan 2019",
+      new_startDate: "2018-06-01",
+      new_endDate: "2019-01-31",
       logotype: "/images/stratsys.png",
       skills: [
         {title: "HTML"},
@@ -256,12 +268,14 @@ export const cv = {
       position: "Reseller",
       title: "Reseller at GameStop",
       description:
-        "Under studietiden arbetade Hajar som återförsäljare på GameStop Nordstan i Göteborg. Hans arbetsuppgifter inkluderade att hjälpa kunder att hitta spel, sortera och städa butiken, kontrollera trasiga konsoler samt att sälja och köpa konsolspel och hårdvara. Denna erfarenhet gav honom värdefull kunskap inom kundservice, försäljning och lagerhantering, vilket har varit användbart i hans senare karriär som utvecklare när det gäller att förstå kundbehov och affärsprocesser.",
+        "Arbetade som återförsäljare på GameStop Nordstan i Göteborg. Hjälpte kunder, hanterade butiken, kontrollerade konsoler samt sålde och köpte spel och hårdvara.",
       role: "Reseller",
       company: "GameStop",
       location: "Göteborg",
-      startDate: "August 2016",
-      endDate: "January 2017",
+      startDate: "Aug 2016",
+      endDate: "Jan 2017",
+      new_startDate: "2016-08-01",
+      new_endDate: "2017-01-31",
       logotype: "/images/gamestop.png",
       skills: [
         {title: "Sälj"},
@@ -279,6 +293,8 @@ export const cv = {
       location: "Göteborg, Sweden",
       startDate: "2016",
       endDate: "2018",
+      new_startDate: "2016-08-01",
+      new_endDate: "2018-06-30",
     },
     {
       degree: "Webbutveckling JavaScript",
@@ -288,6 +304,8 @@ export const cv = {
       location: "Göteborg, Sweden",
       startDate: "2016",
       endDate: "2018",
+      new_startDate: "2016-08-01",
+      new_endDate: "2018-06-30",
     },
     {
       degree: "Teknikprogrammet",
@@ -297,20 +315,22 @@ export const cv = {
       location: "Linköping, Sweden",
       startDate: "2013",
       endDate: "2016",
+      new_startDate: "2013-08-01",
+      new_endDate: "2016-06-30",
     },
   ],
   certificates: [
     {
       name: "Foundational C# with Microsoft",
       organization: "freeCodeCamp",
-      date: "April 2024",
+      date: "Apr 2024",
       link: "https://freecodecamp.org/certification/hajarrashidi/foundational-c-sharp-with-microsoft",
 
     },
     {
       name: "Intermediate SQL Queries",
       organization: "DataCamp",
-      date: "November 2023",
+      date: "Nov 2023",
       link: "https://www.datacamp.com/completed/statement-of-accomplishment/course/fdc9d9190965813212b03d90ffd46274a6301448",
 
     },
@@ -318,7 +338,7 @@ export const cv = {
       name: "Rotarys antimobbningsprojekt",
       organization: "Rotary",
       date: "2012",
-      description: "Hajar Rashidi har tilldelats Rotarys stipendium för att ha medverkat till antimobbning på skolan",
+      description: "Tilldelad Rotarys stipendium för medverkan i antimobbningsarbete på skolan",
       location: "Linköping, Ånestadskolan",
     },
   ],

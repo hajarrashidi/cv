@@ -4,13 +4,24 @@ import {CardHeader} from "@/app/components/Layout/Card/CardHeader";
 import {CardDescription} from "@/app/components/Layout/Card/CardDescription";
 
 export const Experience = ({experience}: { experience: Experience }) => {
-  const {position, company, startDate, endDate, description, assignments, skills} =
+  const {position, company, startDate, endDate, new_startDate, new_endDate, description, assignments, skills} =
     experience;
+
+  const calculateDuration = (start: string, end: string) => {
+    const startDate = new Date(start);
+    const endDate = end === "Nuvarande" ? new Date() : new Date(end);
+    const diffTime = Math.abs(endDate.getTime() - startDate.getTime());
+    const diffYears = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 365));
+    const diffMonths = Math.floor((diffTime % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
+    return diffYears > 0 ? `${diffYears} år ${diffMonths} mån` : `${diffMonths} mån`;
+  };
+
+  const duration = calculateDuration(new_startDate, new_endDate);
 
   return (
     <CardLayout>
       <CardHeader title={position} secondTitle={company}/>
-      <CardDate startDate={startDate} endDate={endDate}/>
+      <CardDate startDate={startDate} endDate={endDate + ", " + duration}/>
       <div className="text-xs mt-2">
 
         <>

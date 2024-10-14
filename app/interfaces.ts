@@ -22,6 +22,8 @@ interface Experience {
   company: string;
   startDate: string;
   endDate: string;
+  new_startDate: string;
+  new_endDate: string;
   skills?: { title: string }[];
   assignments?: { title: string }[];
 }
