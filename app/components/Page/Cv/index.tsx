@@ -33,9 +33,17 @@ export const Cv = () => {
               <About/>
             </Section>
 
-            <Section title="Arbetslivserfarenhet">
-              {workExperience.map((experience, index) => (
-                <Experience key={index} experience={experience}/>
+            <div className="md:hidden">
+              <Section title="Arbetslivserfarenhet">
+                {workExperience.map((experience, index) => (
+                  <Experience key={index} experience={experience}/>
+                ))}
+              </Section>
+            </div>
+
+            <Section title="Utbildning">
+              {education.map((educationItem, index) => (
+                <Education key={index} education={educationItem}/>
               ))}
             </Section>
 
@@ -45,19 +53,17 @@ export const Cv = () => {
               ))}
             </Section>
 
-            <Section title="Utbildning">
-              {education.map((educationItem, index) => (
-                <Education key={index} education={educationItem}/>
-              ))}
-            </Section>
+
           </div>
 
-          <div className="cv-row-half md:order-2 hidden md:block">
-            <Section title="Arbetslivserfarenhet">
-              {workExperience.map((experience, index) => (
-                <Experience key={index} experience={experience}/>
-              ))}
-            </Section>
+          <div className="cv-row-half md:order-2">
+            <div className="hidden md:block">
+              <Section title="Arbetslivserfarenhet">
+                {workExperience.map((experience, index) => (
+                  <Experience key={index} experience={experience}/>
+                ))}
+              </Section>
+            </div>
           </div>
         </div>
       </div>
