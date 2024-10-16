@@ -1,10 +1,10 @@
 import {cv} from "@/app/content/cv";
-import {Experience} from "@/app/components/Experience/Experience";
-import {Education} from "@/app/components/Education";
-import {Section} from "@/app/components/Layout/Section";
-import {Contact} from "@/app/components/Contact";
-import {About} from "@/app/components/About";
-import {Certificate} from "@/app/components/Certificate";
+import {Experience} from "@/app/components/Card/Experience/Experience";
+import {Education} from "@/app/components/Card/Education/Education";
+import {Section} from "@/app/components/Section/Section";
+import {Contact} from "@/app/components/Card/Contact/Contact";
+import {About} from "@/app/components/Card/About/About";
+import {Certificate} from "@/app/components/Card/Certificate/Certificate";
 
 interface InfoItemProps {
   content: string;

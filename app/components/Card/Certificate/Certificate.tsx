@@ -1,6 +1,15 @@
-import {CardLayout} from "@/app/components/Layout/Card/Index";
-import {CardDate} from "@/app/components/Layout/Card/CardDate";
-import {CardHeader} from "@/app/components/Layout/Card/CardHeader";
+import {CardLayout} from "@/app/components/Card/CardLayout";
+import {CardDate} from "@/app/components/Card/CardDate";
+import {CardHeader} from "@/app/components/Card/CardHeader";
+
+interface Certificate {
+  name: string;
+  organization: string;
+  date: string;
+  link?: string;
+  description?: string;
+}
+
 
 export const Certificate = ({certificate}: { certificate: Certificate }) => {
 

@@ -1,7 +1,19 @@
-import {CardLayout} from "@/app/components/Layout/Card/Index";
-import {CardDate} from "@/app/components/Layout/Card/CardDate";
-import {CardHeader} from "@/app/components/Layout/Card/CardHeader";
-import {CardDescription} from "@/app/components/Layout/Card/CardDescription";
+import {CardLayout} from "@/app/components/Card/CardLayout";
+import {CardDate} from "@/app/components/Card/CardDate";
+import {CardHeader} from "@/app/components/Card/CardHeader";
+import {CardDescription} from "@/app/components/Card/CardDescription";
+
+interface Experience {
+  position: string;
+  description: string;
+  company: string;
+  startDate: string;
+  endDate: string;
+  new_startDate: string;
+  new_endDate: string;
+  skills?: { title: string }[];
+  assignments?: { title: string }[];
+}
 
 export const Experience = ({experience}: { experience: Experience }) => {
   const {position, company, startDate, endDate, new_startDate, new_endDate, description, assignments, skills} =
@@ -67,3 +79,4 @@ export const Experience = ({experience}: { experience: Experience }) => {
 
   );
 };
+

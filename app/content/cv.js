@@ -11,7 +11,7 @@ export const cv = {
       role: "Fullstack",
       title: "Fullstack Software Engineer at Sogeti",
       description:
-        "Hajar har arbetat med flera webbutvecklingsprojekt på Sogeti. Han har ansvarat för SSAB WearIQ:s hemsida som är skriven i React samt deras mobila crossplatform app utvecklad i Flutter, vidareutvecklad Oskarshamns kärnkraftverks webapp och mobil app utvecklad i Flutter, integrerat BankID som ett inloggningssytem för Mittuniversitetet, vidareutvecklat Studentbostader.se i React & PHP, och nu hjälper Luftfartsverket att migrera och refaktorisera kod till .NET 8",
+        "Hajar har arbetat med flera webbutvecklingsprojekt på Sogeti. Han har ansvarat för SSAB WearIQ:s hemsida som är skriven i React samt deras mobila crossplatform app utvecklad i Flutter, vidareutvecklad Oskarshamns kärnkraftverks webapp och mobil app utvecklad i Flutter, integrerat egenutvecklad open source bibliotek för BankID som ett inloggningssytem för Mittuniversitetet, vidareutvecklat Studentbostader.se i React & PHP, och nu hjälper Luftfartsverket att migrera och refaktorisera kod till .NET 8",
       company: "Sogeti",
       location: "Linköping",
       startDate: "Mar 2022",

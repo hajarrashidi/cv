@@ -1,4 +1,4 @@
-import {Cv} from "@/app/components/Page/Cv";
+import {Cv} from "@/app/Cv";
 
 const Page = () => {
   return (

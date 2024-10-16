@@ -1,8 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import {CardLayout} from "@/app/components/Layout/Card/Index";
+import {CardLayout} from "@/app/components/Card/CardLayout";
 
-export const Contact = ({infoItems}: { infoItems: InfoItemProps[] }) => (
+interface ContactProps {
+  content: string;
+  type: string;
+}
+
+export const Contact = ({infoItems}: { infoItems: ContactProps[] }) => (
     <CardLayout padding={false}>
       <div className="contactInfo">
         <div className="xd">
