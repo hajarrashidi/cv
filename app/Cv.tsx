@@ -14,7 +14,7 @@ interface InfoItemProps {
 export const Cv = () => {
   const {phone, email, workExperience, website, education, certificates} = cv;
 
-  const infoItems: InfoItemProps[] = [
+  const contactInfo: InfoItemProps[] = [
     {content: phone, type: "phone"},
     {content: email, type: "email"},
     {content: website, type: "website"},
@@ -26,7 +26,7 @@ export const Cv = () => {
         <div className="flex flex-col md:flex-row md:space-x-3">
           <div className="cv-row-half md:order-1">
             <Section title="Kontakt Uppgifter">
-              <Contact infoItems={infoItems}/>
+              <Contact infoItems={contactInfo}/>
             </Section>
 
             <Section title="Om mig">
