@@ -1,0 +1,32 @@
+/* Disable animations for print */
+@media print {
+  .page {
+    margin: 20px; /* Adds 20px margin around each page */
+  }
+
+  .card-layout {
+    page-break-inside: avoid; /* Prevents cards from splitting across pages */
+  }
+
+  @page {
+    margin: 0; /* Removes default page margins */
+  }
+
+  body {
+    -webkit-print-color-adjust: exact; /* Forces exact colors in Webkit browsers */
+    print-color-adjust: exact; /* Standard property for color adjustment */
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+    width: 100%; /* Uses full available width */
+  }
+
+  /* To fully prevent awkward breaks, you might want to add: */
+  .grid-container > * {
+    break-inside: avoid; /* Prevents column content from breaking */
+    page-break-inside: avoid; /* Additional break prevention */
+  }
+
+}

@@ -1,8 +1,9 @@
 import type {Metadata} from "next";
 import "./style/globals.css";
-import {Inter} from "next/font/google";
+import "./style/cv/cv-pdf.css";
+import {Source_Sans_3 } from "next/font/google";
 
-const inter = Inter({subsets: ["latin"]});
+const sans = Source_Sans_3();
 
 export const metadata: Metadata = {
   title: "Hajar Rashidi - CV",
@@ -17,7 +18,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
       <title>Hajar Rashidi</title>
     </head>
-    <body className={inter.className}>{children}</body>
+    <body className={sans.className}>{children}</body>
     </html>
   );
 }

@@ -31,9 +31,7 @@ export const Contact = ({infoItems}: { infoItems: ContactProps[] }) => (
               <div className="">
                 {infoItems.map(({content, type}, index) => (
                   <div key={index} className="card-contact-link rounded-lg">
-                    {type === "phone" && <Link href={`tel:${content}`}>{content}</Link>}
                     {type === "email" && <Link href={`mailto:${content}`}>{content}</Link>}
-                    {type === "website" && <p>{content}</p>}
                   </div>
                 ))}
               </div>

@@ -6,8 +6,8 @@ interface CardLayoutProps {
 }
 
 export const CardLayout = ({children, padding = true}: CardLayoutProps) => (
-  <div className=" pb-2">
-    <div className={`bg-white rounded-lg overflow-hidden ${padding ? 'p-4 md:p-6' : ''}`}>
+  <div className=" pb-2 card-layout">
+    <div className={`bg-white rounded-lg overflow-hidden ${padding ? 'p-4 md:p-4' : ''}`}>
       {children}
     </div>
   </div>

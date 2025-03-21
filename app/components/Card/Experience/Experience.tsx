@@ -34,14 +34,14 @@ export const Experience = ({experience}: { experience: Experience }) => {
     <CardLayout>
       <CardHeader title={position} secondTitle={company}/>
       <CardDate startDate={startDate} endDate={endDate + ", " + duration}/>
-      <div className="text-xs mt-2">
+      <div className="mt-2">
 
         <>
           <CardDescription description={description}/>
 
           {assignments?.length && (
             <div className="mt-3">
-              <h3 className="text-xs font-bold text-gray-600 pb-1">Kunder</h3>
+              <h3 className="text-xs font-bold text-gray-600 pb-1">Clients</h3>
               {assignments.map((assignment, idx) => (
                 <span
                   key={`${assignment.title}-${idx}`}
@@ -55,18 +55,12 @@ export const Experience = ({experience}: { experience: Experience }) => {
 
           {skills?.length && (
             <div className="mt-3">
-              <h3 className="text-xs font-bold text-gray-600 pb-2">Skills</h3>
+              <h3 className="cardSubTitle pb-2">Skills</h3>
 
-              <div className="flex flex-wrap">
+              <div className="flex flex-wrap gap-1"> {/* Tailwind’s gap for consistent spacing */}
                 {skills.map((skill, idx) => (
-                  <div
-                    key={`${skill.title}-${idx}`}
-                    className="pb-2 box-border pr-1"
-                  >
-                    <div
-                      className="skill">
-                      {skill.title}
-                    </div>
+                  <div key={`${skill.title}-${idx}`} className="skill">
+                    {skill.title}
                   </div>
                 ))}
               </div>

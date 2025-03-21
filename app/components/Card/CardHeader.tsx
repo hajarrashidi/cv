@@ -9,7 +9,7 @@ export const CardHeader = ({title, secondTitle}: CardHeaderProps) => (
     <span>{title}</span>
     {secondTitle && (
       <>
-        <span className="mx-2 border-l-2 h-4 rounded border-gra-300"></span>
+        <span className="mx-2 border-l-2 h-4 rounded border-gray-300"></span>
         <span>{secondTitle}</span>
       </>
     )}
